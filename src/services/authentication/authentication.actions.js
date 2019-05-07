@@ -1,0 +1,24 @@
+export const AUTHENTICATION_LOGIN = 'AUTHENTICATION_LOGIN';
+export const AUTHENTICATION_LOGIN_START = 'AUTHENTICATION_LOGIN_START';
+export const AUTHENTICATION_LOGIN_END = 'AUTHENTICATION_LOGIN_END';
+export const AUTHENTICATION_LOGIN_ERROR = 'AUTHENTICATION_LOGIN_ERROR';
+export const AUTHENTICATION_LOGOUT = 'AUTHENTICATION_LOGOUT';
+export const AUTHENTICATION_LOGOUT_START = 'AUTHENTICATION_LOGOUT_START';
+export const AUTHENTICATION_LOGOUT_END = 'AUTHENTICATION_LOGOUT_END';
+export const AUTHENTICATION_LOGOUT_ERROR = 'AUTHENTICATION_LOGOUT_ERROR';
+
+export const loginAction = (username, password) => {
+  return {
+    type: AUTHENTICATION_LOGIN,
+    payload: {
+      username,
+      password,
+    },
+  }
+};
+
+export const logoutAction = () => {
+  return {
+    type: AUTHENTICATION_LOGOUT,
+  }
+};
